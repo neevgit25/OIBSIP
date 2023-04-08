@@ -1,0 +1,101 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	height: 100vh;
+	background: #03dfff;
+	background-image: url(images/todo.jpg);
+    background-size: cover;
+    background-repeat:no-repeat;
+}
+.container{
+	position: relative;
+	max-width: 800px;
+	padding: 10px;
+	margin: 50px auto;
+}
+.container h2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    color: #867070;
+}
+.addTask{
+	width: 100%;
+	display: flex;
+	padding: 10px 0;
+}
+.addTask > input[type="text"]{
+	width: 90%;
+	color: black;
+	border:none;
+	border-bottom: 2px solid #714dd1;
+	background: none;
+	padding: 10px;
+	font-size: 22px;
+	outline: none;
+}
+.addTask button{
+	margin: 0 10px;
+	background: #19376D;
+	color: #fff;
+	font-size: 18px;
+	text-transform: uppercase;
+	padding: 10px;
+	border: none;
+	outline: none;
+	border-radius: 20px;
+	cursor: pointer;
+}
+.addTask button:hover{
+     background-color: #576CBC;
+}
+.notCompleted, .Completed{
+	margin: 5px 0;
+	padding: 20px;
+}
+h3{
+	font-size: 28px;
+	text-transform: uppercase;
+	text-align: center;
+	color: #181d47;
+}
+ol{
+	list-style: none;
+	counter-reset: my-counter;
+}
+ol li{
+	width: 100%;
+	padding: 18px;
+	margin: 5px 0;
+	background: #BA90C6;
+	font-size: 22px;
+	counter-increment: my-counter;
+}
+ol.Completed li{
+	background: #C0DBEA;
+}
+ol li::before{
+	content: counter(my-counter);
+	background: #3218c3;
+	width: 2rem;
+	height: 2rem;
+	border-radius: 50%;
+	display: inline-block;
+	line-height: 2rem;
+	text-align: center;
+	color: #fff;
+	margin-right: 0.5rem;
+}
+li button{
+	float: right;
+	padding: 5px;
+	font-size: 28px;
+	line-height: 28px;
+	margin-right: 15px;
+	background: none;
+	border: none;
+    outline: none;
+	cursor: pointer;
+}
